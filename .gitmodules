@@ -1,0 +1,3 @@
+[submodule "k4geo"]
+	path = k4geo
+	url = git@github.com:atolosadelgado/k4geo.git
