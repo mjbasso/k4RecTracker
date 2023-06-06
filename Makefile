@@ -8,9 +8,9 @@ make:
 	cmake .. -DCMAKE_INSTALL_PREFIX=../install ; \
 	make install -j4 ; \
 	cd .. ; \
-	export LD_LIBRARY_PATH=${CURDIR}/install/lib:${CURDIR}/install/lib64:$$LD_LIBRARY_PATH ; \
+	export LD_LIBRARY_PATH=${CURDIR}/install/lib:${CURDIR}/install/lib64:${CURDIR}/k4geo/install/lib:${CURDIR}/k4geo/install/lib64:$$LD_LIBRARY_PATH ; \
 	export PYTHONPATH=${CURDIR}/install/python:$$PYTHONPATH ; \
-	printf "#!/bin/bash\nsource /cvmfs/sw.hsf.org/key4hep/setup.sh\nexport LD_LIBRARY_PATH=${CURDIR}/install/lib:${CURDIR}/install/lib64:\$$LD_LIBRARY_PATH\nexport PYTHONPATH=${CURDIR}/install/python:\$$PYTHONPATH\n" > ${CURDIR}/setup.sh ; \
+	printf "#!/bin/bash\nsource /cvmfs/sw.hsf.org/key4hep/setup.sh\nexport LD_LIBRARY_PATH=${CURDIR}/install/lib:${CURDIR}/install/lib64:${CURDIR}/k4geo/install/lib:${CURDIR}/k4geo/install/lib64:\$$LD_LIBRARY_PATH\nexport PYTHONPATH=${CURDIR}/install/python:\$$PYTHONPATH\n" > ${CURDIR}/setup.sh ; \
 	chmod +x ${CURDIR}/setup.sh
 get_data:
 	@ mkdir -p data ; \
