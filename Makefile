@@ -1,5 +1,5 @@
 MAKEFLAGS += --no-print-directory
-CERNBOX := https://cernbox.cern.ch/remote.php/dav/public-files/WDA1S8jW4Xfq4G6
+CERNBOX := https://cernbox.cern.ch/remote.php/dav/public-files/as7zVSKFeOVL9DP
 
 make:
 	@ mkdir -p build install ; \
@@ -14,7 +14,7 @@ make:
 	chmod +x ${CURDIR}/setup.sh
 get_data:
 	@ mkdir -p data ; \
-	wget -P data ${CERNBOX}/arcsim_electron_edm4hep.root ${CERNBOX}/arcsim_kaon+_edm4hep.root ${CERNBOX}/arcsim_pi+_edm4hep.root ${CERNBOX}/arcsim_proton_edm4hep.root
+	wget -P data ${CERNBOX}/CLD_with_ARC_fullsim.root ${CERNBOX}/CLD_with_ARC_trackReco_edm4hep.root
 
 .PHONY: clean
 clean:
