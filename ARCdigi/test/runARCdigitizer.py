@@ -3,10 +3,10 @@ from Configurables import ApplicationMgr
 
 from Configurables import GeoSvc
 geoservice = GeoSvc("GeoSvc")
-geoservice.detectors.append("k4geo/FCCee/compact/CLD_ARC/arc_full_v0.xml")
+geoservice.detectors.append("k4geo/FCCee/CLD/compact/CLD_o3_v01/ARC_o1_v01.xml")
 
 from Configurables import k4DataSvc
-dataservice = k4DataSvc("EventDataSvc", input = vars().get("input", "data/arcsim_kaon+_edm4hep.root"))
+dataservice = k4DataSvc("EventDataSvc", input = vars().get("input", "data/CLD_with_ARC_fullsim.root"))
 
 from Configurables import PodioInput
 podioinput = PodioInput("PodioInput", collections = ["ARC_HITS"], OutputLevel = DEBUG)
